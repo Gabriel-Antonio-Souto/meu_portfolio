@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset */
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',"Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+/* Barra */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #555858;
+    border: 3px solid transparent;
+}
+
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url('../img/fundo.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.masthead h1{
+    margin-top: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+}
+.masthead h3{
+    margin-top: 25px;
+    color: rgb(255, 255, 255);
+    
+}
+.btn_masthead{
+    color: white;
+    background-color: #3b547e;
+    width: 210px;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: small;
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .masthead h1{
+        margin-top: 25px;
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+    }
+    .masthead h3{
+        margin-top: 25px;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+    }
+    .avataaars{
+        width: 50%;
+    }
+}
+
+#mainNav{
+    background: rgba(0, 0, 0, 0.29);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+}
+#mainNav a{
+    color: white;
+}
+
+
+/* Sobre Mim */
+#sobre_mim .main{
+    padding-top: 60px;
+    background-color: whitesmoke;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+#sobre_mim .left{
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#sobre_mim .left img{
+    width: 50%;
+    border-radius: 50%;
+    border: 3px solid #3b547e;
+    padding: 5px;
+}
+#sobre_mim .cartao > h1{
+    font-size:30px;
+    color: #3b547e;
+    margin-bottom: 30px;
+}   
+#sobre_mim .cartao hr{
+    width: 30%;
+    border: 1px solid #3b547e;
+    color: #3b547e;
+}
+#sobre_mim .cartao > p{
+    font-weight: 400;
+    color: #1f1f1f;
+    text-align: justify;
+}
+#sobre_mim .right{
+    width: 60vw;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#sobre_mim .cartao{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    border: none;
+    color: white;
+    text-align: justify;
+}
+@media only screen and (max-width: 950px) {
+    #sobre_mim .cartao{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #sobre_mim .main{
+        flex-direction: column-reverse;
+        padding: auto;
+    }
+    #sobre_mim .left > h1{
+        text-align: center;
+    }
+    #sobre_mim .left img{
+        width: 50%;
+    }
+    #sobre_mim .left{
+        width: 100%;
+        height: auto;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    #sobre_mim .right{
+        width: 100%;
+        height: auto;
+    }
+    #sobre_mim .left-img{
+        width: 50vw;
+    }
+    #sobre_mim .cartao{
+        width: 100%;
+    }
+    #sobre_mim .cartao > h1{
+        margin-top: 10px;
+        font-size:30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Projetos */
+.col-md-4{
+    background: white;
+}
+.col-md-8{
+    background: white;
+}
+
+
+/* Educação */
+#educacao .main{
+    background-color: whitesmoke;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#educacao .left{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+#educacao .left img{
+    width: 100%;
+    
+}
+#educacao .cartao > h1{
+    font-size:30px;
+    color: #3b547e;
+    margin-bottom: 30px;
+}   
+#educacao .cartao hr{
+    width: 30%;
+    border: 1px solid #3b547e;
+    color: #3b547e;
+}
+#educacao .cartao > p{
+    font-weight: 400;
+    color: #1f1f1f;
+    text-align: justify;
+}
+#educacao .right{
+    width: 50vw;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#educacao .cartao{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    border: none;
+    color: white;
+    text-align: justify;
+}
+@media only screen and (max-width: 950px) {
+    #educacao .cartao{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #educacao .main{
+        flex-direction: column-reverse;
+        padding: auto;
+    }
+    #educacao .left > h1{
+        text-align: center;
+    }
+    #educacao .left img{
+        width: 100%;
+    }
+    #educacao .left{
+        width: 100%;
+        height: auto;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    #educacao .right{
+        width: 100%;
+        height: auto;
+    }
+    #educacao .left-img{
+        width: 50vw;
+    }
+    #educacao .cartao{
+        width: 100%;
+    }
+    #educacao .cartao > h1{
+        margin-top: 10px;
+        font-size:30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* modals */
+#modals{
+    background-color: whitesmoke;
+}
+#main{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#modals h1{
+    font-size:30px;
+    padding-bottom: 30px;
+    color: #3b547e;
+    text-align: left;
+    text-align: center;
+}
+.card{
+    background: #fffafa;
+    border-radius: 0%;
+    border: none;
+    text-align: center;
+    color: #3b547e;
+}
+.card-img-top{
+    border-radius: 0%;
+    border: none;
+}
+.card h5{
+    font-family: 'Poppins',"Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 600;
+}
+.image-container img{
+    width: 100%;
+    height: auto;
+}
+.icon-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(59,84,126, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity ease-in-out 0.25s
+}
+.icon-image svg{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+}
+.image-container:hover .icon-image{
+    opacity: 1;
+}
+
+/* Footer */
+#copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: white;
+    background-color:#253134;
+}
+
+/* Contato */
+#contato .icon{
+   margin: 30px;
+}
+#contato .icon span{
+    font-weight: 400;
+    color: #1f1f1f;
+    margin-left: 30px;
+}
+#contato .main{
+    background-color: whitesmoke;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+#contato .left{
+    width: 55vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+#contato .left img{
+    width: 100%;
+}
+#contato .cartao > h1{
+    font-size:30px;
+    color: #3b547e;
+    margin-bottom: 30px;
+}   
+#contato .cartao hr{
+    width: 30%;
+    border: 1px solid #3b547e;
+    color: #3b547e;
+}
+#contato .cartao > p{
+    font-weight: 400;
+    color: #1f1f1f;
+    text-align: justify;
+}
+#contato .right{
+    width: 45vw;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#contato .cartao{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    border: none;
+    color: white;
+    text-align: justify;
+}
+@media only screen and (max-width: 950px) {
+    #contato .cartao{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #contato .main{
+        flex-direction: column-reverse;
+        padding: auto;
+    }
+    #contato .left > h1{
+        text-align: center;
+    }
+    #contato .left img{
+        width: 100%;
+    }
+    #contato .left{
+        width: 100%;
+        height: auto;
+        padding-top: 60px;
+    }
+    #contato .right{
+        width: 100%;
+        height: auto;
+    }
+    #contato .left-img{
+        width: 50vw;
+    }
+    #contato .cartao{
+        width: 100%;
+    }
+    #contato .cartao > h1{
+        margin-top: 10px;
+        font-size:30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* modal */
+.modal-content{
+    border: none;
+}
+.modal-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.modal-header{
+    border: none;
+}
+.btn_modal{
+    color: white;
+    background-color: #3b547e;
+    width: 210px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 30px;
+}
+.btn_git{
+    color: white;
+    background-color: #161b22;
+    width: 210px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 30px;
+}
+.modal-body h1{
+    text-align: center;
+    font-size:45px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    color: #3b547e;
+    text-align: left;
+}
+.modal-body img{
+    width: 100%;
+}
+.modal-footer{
+    padding-bottom: 50px;
+}
+.modal-body .main{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.text-modal{
+    font-weight: 400;
+    color: #1f1f1f;
+    text-align: justify;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: medium;
+}
+.li-modal{
+    list-style:circle;
+}
+@media only screen and (max-width: 900px) {
+    .modal-body .main{
+        margin-left: 0;
+        margin-right: 0;
+    } 
+}
