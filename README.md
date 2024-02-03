@@ -2,7 +2,7 @@
 
 <img align="center" with="100%" src="assets/img/portfolio.png" />
 
-Site do meu portfólio
+Site do meu portfólio visando apresentar meus projetos e habilidades. 
 
 ## Tecnologias utilizadas
 <div style="display: inline_block"><br>
