@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb {
 .masthead {
     height: 100vh;
     min-height: 500px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url('../img/fundo.gif');
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url('../img/fundo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,12 +51,16 @@ body::-webkit-scrollbar-thumb {
 }
 .btn_masthead{
     color: white;
-    background-color: #3b547e;
+    background-color: #1f2931;
     width: 210px;
     padding: 15px;
     margin-top: 30px;
     font-size: small;
     border-radius: 30px;
+}
+.avataaars{
+    border-radius: 50%;
+    width: 20%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -77,7 +81,11 @@ body::-webkit-scrollbar-thumb {
 
 
 .navbar {
+    background: rgba(0, 0, 0, 0.29);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
     transition: all 0.4s;
+    
 }
 
 .navbar .nav-link {
@@ -142,7 +150,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Sobre Mim */
 #sobre_mim .main{
-    padding-top: 60px;
+    padding-top: 10%;
     background-color: whitesmoke;
     width: 100%;
     display: flex;
@@ -150,29 +158,16 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     flex-direction: row-reverse;
 }
-#sobre_mim .left{
-    width: 40vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-#sobre_mim .left img{
-    width: 50%;
-    border-radius: 50%;
-    border: 3px solid #3b547e;
-    padding: 5px;
-}
+
 #sobre_mim .cartao > h1{
     font-size:30px;
-    color: #3b547e;
+    color: #1f2931;
     margin-bottom: 30px;
 }   
 #sobre_mim .cartao hr{
     width: 30%;
-    border: 1px solid #3b547e;
-    color: #3b547e;
+    border: 1px solid #1f2931;
+    color: #1f2931;
 }
 #sobre_mim .cartao > p{
     font-weight: 400;
@@ -180,7 +175,7 @@ body::-webkit-scrollbar-thumb {
     text-align: justify;
 }
 #sobre_mim .right{
-    width: 60vw;
+    width: 100vw;
     display: flex;
     height: auto;
     justify-content: center;
@@ -188,7 +183,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
 }
 #sobre_mim .cartao{
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -207,24 +202,9 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column-reverse;
         padding: auto;
     }
-    #sobre_mim .left > h1{
-        text-align: center;
-    }
-    #sobre_mim .left img{
-        width: 50%;
-    }
-    #sobre_mim .left{
-        width: 100%;
-        height: auto;
-        padding-top: 60px;
-        padding-bottom: 30px;
-    }
     #sobre_mim .right{
         width: 100%;
         height: auto;
-    }
-    #sobre_mim .left-img{
-        width: 50vw;
     }
     #sobre_mim .cartao{
         width: 100%;
@@ -247,7 +227,6 @@ body::-webkit-scrollbar-thumb {
     background: white;
 }
 
-
 /* Educação */
 #educacao .main{
     background-color: whitesmoke;
@@ -255,6 +234,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 5%;
 }
 #educacao .left{
     width: 50vw;
@@ -266,17 +246,17 @@ body::-webkit-scrollbar-thumb {
 }
 #educacao .left img{
     width: 100%;
-    
+    padding-right: 5%;
 }
 #educacao .cartao > h1{
     font-size:30px;
-    color: #3b547e;
+    color: #1f2931;
     margin-bottom: 30px;
 }   
 #educacao .cartao hr{
     width: 30%;
-    border: 1px solid #3b547e;
-    color: #3b547e;
+    border: 1px solid #1f2931;
+    color: #1f2931;
 }
 #educacao .cartao > p{
     font-weight: 400;
@@ -316,6 +296,7 @@ body::-webkit-scrollbar-thumb {
     }
     #educacao .left img{
         width: 100%;
+        padding-right: 0;
     }
     #educacao .left{
         width: 100%;
@@ -340,18 +321,112 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
+/* Experiência */
+#experiencia .main{
+    background-color: whitesmoke;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+#experiencia .left{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+#experiencia .left img{
+    width: 100%;
+    padding-right: 5%;
+}
+#experiencia .cartao > h1{
+    font-size:30px;
+    color: #1f2931;
+    margin-bottom: 30px;
+}   
+#experiencia .cartao hr{
+    width: 30%;
+    border: 1px solid #1f2931;
+    color: #1f2931;
+}
+#experiencia .cartao > p{
+    font-weight: 400;
+    color: #1f1f1f;
+    text-align: justify;
+}
+#experiencia .right{
+    width: 50vw;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#experiencia .cartao{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    border: none;
+    color: white;
+    text-align: justify;
+}
+@media only screen and (max-width: 950px) {
+    #experiencia .cartao{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #experiencia .main{
+        flex-direction: column-reverse;
+        padding: auto;
+    }
+    #experiencia .left > h1{
+        text-align: center;
+    }
+    #experiencia .left img{
+        width: 100%;
+        padding-right: 0;
+    }
+    #experiencia .left{
+        width: 100%;
+        height: auto;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    #experiencia .right{
+        width: 100%;
+        height: auto;
+    }
+    #experiencia .left-img{
+        width: 50vw;
+    }
+    #experiencia .cartao{
+        width: 100%;
+    }
+    #experiencia .cartao > h1{
+        margin-top: 10px;
+        font-size:30px;
+        margin-bottom: 30px;
+    }
+}
+
 /* modals */
 #modals{
     background-color: whitesmoke;
 }
 #main{
-    padding-top: 5%;
+    padding-top: 10%;
     padding-bottom: 5%;
 }
 #modals h1{
     font-size:30px;
     padding-bottom: 30px;
-    color: #3b547e;
+    color: #1f2931;
     text-align: left;
     text-align: center;
 }
@@ -360,7 +435,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 0%;
     border: none;
     text-align: center;
-    color: #3b547e;
+    color: #1f2931;
 }
 .card-img-top{
     border-radius: 0%;
@@ -404,7 +479,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     padding: 50px;
     color: white;
-    background-color:#253134;
+    background-color:#1f2931;
 }
 
 /* Contato */
@@ -424,17 +499,31 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10%;
+    padding-bottom: 5%;
 }
 
 #contato h1{
     font-size:30px;
-    color: #3b547e;
+    color: #1f2931;
     margin-bottom: 50px;
     text-align: center;
 }   
 
 .contatos{
     margin-bottom: 60px;
+}
+
+.btn_contatos{
+    color: white;
+    background-color: #1f2931;
+    width: 60px; /* Largura */
+    height: 60px; /* Altura */
+    border-radius: 50%;
+    font-size:xx-large;
+    text-align: center;
+    padding: auto;
+    margin: 20px;
 }
 
 
@@ -452,70 +541,4 @@ body::-webkit-scrollbar-thumb {
         font-size:30px;
         margin-bottom: 30px;
     }
-}
-
-/* modal */
-.modal-content{
-    border: none;
-}
-.modal-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-}
-.modal-header{
-    border: none;
-}
-.btn_modal{
-    color: white;
-    background-color: #3b547e;
-    width: 210px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 30px;
-}
-.btn_git{
-    color: white;
-    background-color: #161b22;
-    width: 210px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 30px;
-}
-.modal-body h1{
-    text-align: center;
-    font-size:45px;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    font-weight: 500;
-    color: #3b547e;
-    text-align: left;
-}
-.modal-body img{
-    width: 100%;
-}
-.modal-footer{
-    padding-bottom: 50px;
-}
-.modal-body .main{
-    margin-left: 15%;
-    margin-right: 15%;
-}
-.text-modal{
-    font-weight: 400;
-    color: #1f1f1f;
-    text-align: justify;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: medium;
-}
-.li-modal{
-    list-style:circle;
-}
-@media only screen and (max-width: 900px) {
-    .modal-body .main{
-        margin-left: 0;
-        margin-right: 0;
-    } 
 }
