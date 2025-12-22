@@ -1,6 +1,6 @@
 ## Portfólio
 
-<img align="center" with="100%" src="assets/img/portfolio.png" />
+<img align="center" with="100%" src="img/portfolio.png" />
 
 Site do meu portfólio visando apresentar meus projetos e habilidades. 
 
@@ -18,3 +18,4 @@ Site do meu portfólio visando apresentar meus projetos e habilidades.
 ## Link:
 
 https://gabriel-antonio-souto.github.io/meu_portfolio/
+
