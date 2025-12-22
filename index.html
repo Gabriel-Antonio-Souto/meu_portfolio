@@ -1,287 +1,316 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Gabriel Antonio técnico em desenvolvimento de sistemas" />
-        <meta name="author" content="Gabriel Antonio"/>
-        <title>Gabriel Antonio</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/icon.png"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> 
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="assets/css/estilo.css?1">
-    </head>
-    <body>
-        <!-- Menu-->
-        <nav class="navbar navbar-expand-lg shadow fixed-top py-3">
-            <div class="container">
-            <a class="navbar-brand" href="index.html">Gabriel <span style="color: #1f2931;">Antonio</span></a>
-            <button style="font-size: 25px; color: transparent; border: none;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars" id="box_navbar" ></i>             
-            </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#sobre_mim">Sobre Mim</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experiencia">Experiência</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#educacao">Educação</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#modals">Projetos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contato">Contato</a>
-                        </li>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gabriel Antonio técnico em desenvolvimento de sistemas" />
+    <meta name="author" content="Gabriel Antonio"/>
+    <link rel="icon" type="image/x-icon" href="img/icon.png"/>
+    <title>Portfolio - Gabriel Antonio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('img/artistic-mountain-landscape-minimalist-vector-874586.jpeg'), linear-gradient(to right, rgba(32, 33, 35, 0.8), rgba(154, 152, 156, 0.8));
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            width: 100%;
+            height: 100vh;
+        }
+      
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hover-zoom {
+            transition: transform 0.3s ease;
+        }
+        .hover-zoom:hover {
+            transform: scale(1.05);
+        }
+        /* Nav transparente com letras pretas */
+        .nav-transparent {
+            background: transparent !important;
+            box-shadow: none !important;
+            border: none;
+            
+        }
+        .nav-transparent h1,
+        .nav-transparent ul li a,
+        .nav-transparent button {
+            color: rgb(255, 255, 255) !important;
+        }
+        /* Transições suaves */
+        nav {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        nav h1,
+        nav ul li a,
+        nav button {
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header sticky top-0 bg-white shadow-lg z-10   -->
+    <nav class="fixed top-0 w-full z-30 backdrop-blur bg-white/70 border-b border-gray-200 nav-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <h1 class="text-2xl font-bold text-black-600">Gabriel Antonio</h1>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#sobre" class="text-gray-700 hover:text-black-600">Sobre</a></li>
+                    <li><a href="#habilidades" class="text-gray-700 hover:text-black-600">Habilidades</a></li>
+                    <li><a href="#projetos" class="text-gray-700 hover:text-black-600">Projetos</a></li>
+                    <li><a href="#experiencia" class="text-gray-700 hover:text-black-600">Experiência</a></li>
+                    <li><a href="#educacao" class="text-gray-700 hover:text-black-600">Educação</a></li>
+                    <li><a href="#contato" class="text-gray-700 hover:text-black-600">Contato</a></li>
+                </ul>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <ul id="mobile-menu" class="hidden md:hidden">
+                <li><a href="#sobre" class="block py-2 text-gray-700 hover:text-black-600">Sobre</a></li>
+                <li><a href="#habilidades" class="block py-2 text-gray-700 hover:text-black-600">Habilidades</a></li>
+                <li><a href="#projetos" class="block py-2 text-gray-700 hover:text-black-600">Projetos</a></li>
+                <li><a href="#experiencia" class="block py-2 text-gray-700 hover:text-black-600">Experiência</a></li>
+                <li><a href="#educacao" class="block py-2 text-gray-700 hover:text-black-600">Educação</a></li>
+                <li><a href="#contato" class="block py-2 text-gray-700 hover:text-black-600">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left fade-in">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Olá, sou Gabriel Antonio</h2>
+                <p class="text-xl mb-6">Agente administrativo e estudante de Tecnologia da Informação na UNIVESP.</p>
+                <a href="#sobre" style="background-color: #1f2931;" class="text-white-600 px-16 py-4 rounded-full font-semibold hover:bg-gray-200 transition">Sobre mim</a>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0 ml-0 md:ml-8 text-center">
+                <img src="img/foto_ghibli.jpg" class="rounded-full border-b mx-auto shadow-lg hover-zoom w-48 h-48 md:w-72 md:h-72" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Sobre Mim</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8e6e6aa5-88c6-46a7-a9c9-de4e3050f0df.png" alt="Vista ampla de estação de trabalho com computador desktop, livros de programação, e uma visão de cidade através da janela em um quarto iluminado durante o dia" class="rounded-lg shadow-lg hover-zoom" />
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <p class="text-lg leading-relaxed mb-4">
+                        Olá! Sou Gabriel Antonio, profissional administrativo, atuando com planejamento, organização e suporte à gestão escolar.
+                        Sou formado como técnico em Desenvolvimento de Sistemas pela ETEC de Guaianazes, com conhecimentos em tecnologias como HTML, CSS, JavaScript, PHP e Python. Atualmente, curso bacharelado em Tecnologia da Informação na UNIVESP, unindo minhas habilidades administrativas à tecnologia para otimizar processos, melhorar a comunicação e apoiar a transformação digital.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Tenho facilidade para aprender, sou resiliente, proativo e apaixonado por inovação. Meu objetivo é atuar em áreas que conectem tecnologias, agregando valor por meio de soluções tecnológicas e organização eficiente.
+                        Sempre disposto a novos desafios e a contribuir para o crescimento das equipes e instituições com as quais colaboro.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Habilidades</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-zoom fade-in">
+                    <h3 class="text-xl font-semibold mb-2">Frontend</h3>
+                    <p class="text-gray-600">HTML, CSS, JavaScript, Bootstrap</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-zoom fade-in">
+                    <h3 class="text-xl font-semibold mb-2">Backend</h3>
+                    <p class="text-gray-600">PHP, Node.js, Python, Laravel</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-zoom fade-in">
+                    <h3 class="text-xl font-semibold mb-2">Banco de Dados</h3>
+                    <p class="text-gray-600">MySQL, SQL Server, SQLite</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center hover-zoom fade-in">
+                    <h3 class="text-xl font-semibold mb-2">Ferramentas</h3>
+                    <p class="text-gray-600">Git</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover-zoom fade-in">
+                    <img src="img/3.png" alt="Screenshot de aplicativo web responsivo para e-commerce com produtos tecnológicos, carrinho de compras e botão de checkout em design minimalista" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold mb-2">Web Notes</h3>
+                    <p class="text-gray-600 mb-4">Sistema de anotações WEB desenvolvido com MySQL, PHP, JavaScript, CSS e framework Bootstrap. Utiliza as bibliotecas PHPMailer e Trumbowyg, além de uma API própria para integração entre front-end e back-end.</p>
+                    <a href="https://github.com/Gabriel-Antonio-Souto/WebNotes" target="_blank" class="text-black-600 hover:text-black-800">Ver Projeto</a>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover-zoom fade-in">
+                    <img src="img/2.png" alt="Interface de dashboard analítico com gráficos de barras, linhas e pizza mostrando métricas de vendas em tempo real em painel escuro" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold mb-2">Arte Moderna</h3>
+                    <p class="text-gray-600 mb-4">O site Arte Moderna aborda o movimento modernista no Brasil. Projeto Front-end criado para apresentar minhas habilidades em HTML, CSS e framework Bootstrap, evidenciando domínio técnico e atenção ao design responsivo.</p>
+                    <a href="https://github.com/Gabriel-Antonio-Souto/arte_moderna" target="_blank" class="text-black-600 hover:text-black-800">Ver Projeto</a>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover-zoom fade-in">
+                    <img src="img/1.png" alt="Aplicativo móvel simulando gestão de tarefas com lista de entradas, marcado como concluído e notificação em tela de smartphone" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold mb-2">Minhas Dívidas</h3>
+                    <p class="text-gray-600 mb-4">Aplicativo PWA para gerenciamento de dívidas, com banco de dados MySQL e tecnologias PHP, JavaScript, CSS e framework Bootstrap. O sistema foi projetado para rodar em qualquer dispositivo com acesso à internet.</p>
+                    <a href="https://github.com/Gabriel-Antonio-Souto/MinhasDividas" target="_blank" class="text-black-600 hover:text-black-800">Ver Projeto</a>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover-zoom fade-in">
+                    <img src="img/4.png" alt="Interface de dashboard analítico com gráficos de barras, linhas e pizza mostrando métricas de vendas em tempo real em painel escuro" class="w-full h-48 object-cover rounded mb-4" />
+                    <h3 class="text-xl font-semibold mb-2">Portfólio</h3>
+                    <p class="text-gray-600 mb-4">Site pessoal de portfólio, desenvolvido como projeto Front-end. Criado para demonstrar meus conhecimentos em HTML, CSS e framework Bootstrap, reunindo trabalhos anteriores e destacando minhas competências técnicas.</p>
+                    <a href="https://github.com/Gabriel-Antonio-Souto/meu_portfolio" target="_blank" class="text-black-600 hover:text-black-800">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência Profissional -->
+    <section id="experiencia" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Experiência Profissional</h2>
+            <div class="space-y-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-zoom fade-in">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-4">
+                        <h3 class="text-2xl font-semibold">Agente Administrativo</h3>
+                        <span class="text-black-600 font-medium text-lg">Maio 2025 - Presente</span>
+                    </div>
+                    <p class="text-gray-800 font-medium mb-2">Prefeitura Municipal de Itaquaquecetuba</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Gestão Administrativa Escolar: Apoio em rotinas de secretaria, organização de documentos e controle de arquivos.</li>
+                        <li>Atendimento: Suporte a alunos, responsáveis, professores e comunidade escolar, presencialmente e por canais de comunicação.</li>
+                        <li>Processos Escolares: Auxílio em matrículas, transferências, emissão de históricos e demais registros escolares.</li>
+                        <li>Suporte à Gestão: Apoio nas atividades administrativas, organização de agendas, relatórios, análise de dados e suporte às demandas da direção.</li>
                     </ul>
-                </div> 
-            </div>
-        </nav>
-
-        
-        <header class="masthead">
-            <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 text-center">
-                    <img src="assets/img/foto_ghibli.jpg" class="avataaars" alt="..." />
-                    <h1 style="font-weight: 500;">Gabriel Antonio</h1>
-                    <i><h3 style="font-style: 500;">Agente Administrativo | Estudante de TI na UNIVESP</h3></i>
-                    <a href="#sobre_mim"><button class="btn_masthead">Sobre Mim</button></a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-zoom fade-in">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-4">
+                        <h3 class="text-2xl font-semibold">Agente de Atendimento</h3>
+                        <span class="text-black-600 font-medium text-lg">Agosto 2023 - Maio 2025</span>
+                    </div>
+                    <p class="text-gray-800 font-medium mb-2">TMKT</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Atendimento Receptivo (SAC) auxílio e suporte a clientes com dificuldades em sua Banda Larga.</li>
+                        <li>Suporte Técnico: Agendamento e envio de técnico e Troca de plano ou serviço.</li>
+                        <li>Atendimento Financeiro: Detalhamento de faturas e Envio e contestação de faturas.</li>
+                        <li>Resolução de Problemas Gerais e apoio em diferentes demandas relacionadas ao serviço.</li>
+                    </ul>
                 </div>
             </div>
-            </div>
-        </header>
+        </div>
+    </section>
 
-        <section id="sobre_mim">
-            <div class="main">
-                <div class="right">
-                    <div class="cartao">
-                        <h1>Sobre Mim</h1>                   
-                        <p>Olá! Sou Gabriel Antonio, profissional administrativo, atuando com planejamento, organização e suporte à gestão escolar.</p>
-                        <p>Sou formado como técnico em Desenvolvimento de Sistemas pela ETEC de Guaianazes, com conhecimentos em tecnologias como HTML, CSS, JavaScript, PHP e Python. Atualmente, curso bacharelado em Tecnologia da Informação na UNIVESP, unindo minhas habilidades administrativas à tecnologia para otimizar processos, melhorar a comunicação e apoiar a transformação digital.</p>
-                        <p>Tenho facilidade para aprender, sou resiliente, proativo e apaixonado por inovação. Meu objetivo é atuar em áreas que conectem tecnologias, agregando valor por meio de soluções tecnológicas e organização eficiente.</p>
-                        <p>Sempre disposto a novos desafios e a contribuir para o crescimento das equipes e instituições com as quais colaboro.</p>
-                        <p align="center">
-                            <a href="https://skillicons.dev">
-                                <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap,cpp" />
-                                <img src="https://skillicons.dev/icons?i=py,php,java,react,laravel" />
-                                <img src="https://skillicons.dev/icons?i=mysql,git,github,vscode" />          
-                            </a>
-                        </p>
-                        <hr>
-                    </div>
+    <!-- Educação -->
+    <section id="educacao" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Educação</h2>
+            <div class="space-y-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-zoom fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Bacharelado em Tecnologia da Informação</h3>
+                    <p class="text-gray-600 mb-2"><strong>Universidade Virtual do Estado de São Paulo (UNIVESP)</strong></p>
+                    <p class="text-gray-600 mb-4">Previsão de conclusão: Agosto 2027</p>
+                    <p>Durante o curso, tenho focado em algoritmos, estruturas de dados e desenvolvimento de software, complementando com projetos práticos para aplicar conceitos teóricos em cenários reais.</p>
                 </div>
-            </div>       
-        </section>
-
-         <section id="experiencia">
-            <div class="main">
-                <div class="right">
-                    <div class="cartao">
-                        <h1 style="text-align: center;">Experiência</h1>                   
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="assets/img/pi.png" class="img-fluid rounded-start" alt="...">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body" style="text-align: justify;">
-                                  <h5 class="card-title">Prefeitura de Itaquaquecetuba</h5>
-                                  <p class="card-text">Agente Administrativo</p>
-                                  <p class="card-text"><small class="text-body-secondary">2025 - Present</small></p>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                              <div class="col-md-4" style="display: flex; align-items: center;">
-                                <img src="assets/img/tmkt.png" class="img-fluid rounded-start" alt="...">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body" style="text-align: justify;">
-                                  <h5 class="card-title">TMKT</h5>
-                                  <p class="card-text">Agente de Atendimento</p>
-                                  <p class="card-text"><small class="text-body-secondary">2024 - 2025</small></p>
-                                  <p class="card-text">Jovem Aprendiz</p>
-                                  <p class="card-text"><small class="text-body-secondary">2023 - 2024</small></p>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="left">
-                    <img src="assets/img/cv.svg" alt="">
+                <div class="bg-white p-8 rounded-lg shadow-lg hover-zoom fade-in">
+                    <h3 class="text-2xl font-semibold mb-4">Técnico em Desenvolvimento de Sistemas</h3>
+                    <p class="text-gray-600 mb-2"><strong>ETEC de Guaianazes</strong></p>
+                    <p class="text-gray-600 mb-4">Conclusão: Dezembro 2022</p>
+                    <p>Ensino Médio integrado ao Técnico (M-tec) em desenvolvimento de sistemas pela ETEC de Guaianazes</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-        <section id="educacao">
-            <div class="main">
-                <div class="right">
-                    <div class="cartao">
-                        <h1 style="text-align: center;">Educação</h1>                   
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="assets/img/univesp.png" class="img-fluid rounded-start" alt="...">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body" style="text-align: justify;">
-                                  <h5 class="card-title">UNIVESP</h5>
-                                  <p class="card-text">Cursando Bacharelado em Tecnologia da Informação</p>
-                                  <p class="card-text"><small class="text-body-secondary">2024 - Present</small></p>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="assets/img/etec.png" class="img-fluid rounded-start" alt="...">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body" style="text-align: justify;">
-                                  <h5 class="card-title">ETEC de Guaianazes</h5>
-                                  <p class="card-text">Ensino médio integrado ao técnico de Desenvolvimento de Sistemas</p>
-                                  <p class="card-text"><small class="text-body-secondary">2020 - 2022</small></p>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="left">
-                    <img src="assets/img/educacao.svg" alt="">
-                </div>
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contato</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="https://linkedin.com/in/gabriel-antonio01/" target="_blank" class="bg-white p-6 rounded-lg shadow-lg text-center hover-zoom fade-in">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063s2.064.925 2.064 2.063c0 1.139-.92 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    <p class="text-gray-700 text-lg">linkedin.com/in/gabriel-antonio01/</p>
+                </a>
+                <a href="https://github.com/Gabriel-Antonio-Souto" target="_blank" class="bg-white p-6 rounded-lg shadow-lg text-center hover-zoom fade-in">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <p class="text-gray-700 text-lg">github.com/Gabriel-Antonio-Souto</p>
+                </a>
+                <a href="mailto:gabriel.antonio.souto@gmail.com" class="bg-white p-6 rounded-lg shadow-lg text-center hover-zoom fade-in">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <p class="text-gray-700 text-lg">gabriel.antonio.souto@gmail.com</p>
+                </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="modals">
-            <div class="container" id="main">
-                <h1>Projetos</h1>
-                <div class="row row-cols-1 row-cols-md-4 g-4">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://raw.githubusercontent.com/Gabriel-Antonio-Souto/WebNotes/main/assets/img/webnotes.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Web Notes</h5>
-                                <br>
-                                <p class="card-text" style="text-align: justify;">Projeto de um sistema de anotações WEB utilizando banco de dados MySQL, PHP, JavaScript, CSS, framework Bootstrap e bibliotecas PHPMailer e Trumbowyg. Também foi criada uma API para a comunicação entre back-end e front-end.</p>
-                                
-                            </div>
-                            <div class="card-footer" style="background-color: white;">
-                                <a class="btn btn-dark" href="https://github.com/Gabriel-Antonio-Souto/WebNotes" target="_blank" role="button"><i class="bi bi-github"></i> Github</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://raw.githubusercontent.com/Gabriel-Antonio-Souto/arte_moderna/main/assets/img/fundo.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Arte Moderna</h5>
-                                <br>
-                                <p class="card-text" style="text-align: justify;">O site Arte Moderna é dedicado a falar sobre o modernismo no Brasil. O projeto Front-end tem como objetivo demonstrar meus conhecimentos e habilidades em HTML, CSS e FRAMEWORK BOOTSTRAP. </p>
-                            </div>
-                            <div class="card-footer" style="background-color: white;">
-                                <a class="btn btn-dark" href="https://github.com/Gabriel-Antonio-Souto/arte_moderna" target="_blank" role="button"><i class="bi bi-github"></i> Github</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://raw.githubusercontent.com/Gabriel-Antonio-Souto/MinhasDividas/main/assets/img/3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Minhas Dívidas</h5>
-                                <br>
-                                <p class="card-text" style="text-align: justify;">Projeto simples de um aplicativo PWA de um gerenciador de dívidas. Utilizando banco de dados MySQL, PHP, JavaScript, CSS e framework Bootstrap.</p>
-                            </div>
-                            <div class="card-footer" style="background-color: white;">
-                                <a class="btn btn-dark" href="https://github.com/Gabriel-Antonio-Souto/MinhasDividas" target="_blank" role="button"><i class="bi bi-github"></i> Github</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://raw.githubusercontent.com/Gabriel-Antonio-Souto/meu_portfolio/main/assets/img/portfolio.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Portfólio</h5>
-                                <br>
-                                <p class="card-text" style="text-align: justify;">Site do meu portfólio. Esse projeto Front-end tem como objetivo demonstrar meus conhecimentos e habilidades em HTML, CSS e FRAMEWORK BOOTSTRAP.</p>
-                            </div>
-                            <div class="card-footer" style="background-color: white;">
-                                <a class="btn btn-dark" href="https://github.com/Gabriel-Antonio-Souto/meu_portfolio" target="_blank" role="button"><i class="bi bi-github"></i> Github</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-        </section>
+    <!-- Footer -->
+    <footer style="background-color: #1f2931;" class="bg-gray-900 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2025 Gabriel Antonio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-        <section id="contato">
-            <div class="main">
-                <div class="container">
-                    <h1>Contato</h1> 
-                    <div class="contatos">                  
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <div class="col">
-                              <div class="card h-100">
-                                <div class="card-body">
-                                  <button class="btn_contatos"><i class="bi bi-linkedin"></i></button>
-                                  <a href="https://www.linkedin.com/in/gabriel-antonio01/" target="_blank"><p class="card-text" style="color: #1f2931; margin-bottom: 10px;">www.linkedin.com/in/gabriel-antonio01/</p></a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="card h-100">
-                                <div class="card-body">
-                                  <button class="btn_contatos"><i class="bi bi-github"></i></button>
-                                  <a href="https://github.com/Gabriel-Antonio-Souto" target="_blank"><p class="card-text" style="color: #1f2931; margin-bottom: 10px;">github.com/Gabriel-Antonio-Souto</p></a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="card h-100">
-                                <div class="card-body">
-                                  <button class="btn_contatos"><i class="bi bi-envelope-at-fill"></i></button>
-                                  <a href="mailto:gabriel.antonio.souto@gmail.com"><p class="card-text" style="color: #1f2931; margin-bottom: 10px;">gabriel.antonio.souto@gmail.com</p></a>
-                                </div>
-                              </div>
-                            </div>           
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
 
-        <footer>
-            <section id="copyright">
-                <p>Copyright © Gabriel Antonio 2025</p>
-            </section>
-        </footer>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-        
-        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-        <script>
-            $(function () {
-                $(window).on('scroll', function () {
-                    if ( $(window).scrollTop() > 10 ) {
-                        $('.navbar').addClass('active');
-                    } else {
-                        $('.navbar').removeClass('active');
-                    }
-                });
+        // Nav scroll effect (assumindo background branco/escuro da hero section)
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                nav.classList.remove('nav-transparent');
+                nav.classList.add('bg-white', 'shadow-lg');
+            } else {
+                nav.classList.add('nav-transparent');
+                nav.classList.remove('bg-white', 'shadow-lg');
+            }
+        });
+
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
             });
-        </script>
-    </body>
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
 </html>
+
